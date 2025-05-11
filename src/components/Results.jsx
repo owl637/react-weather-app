@@ -18,7 +18,11 @@ const Results = (props) => {
           </p>
         )}
         <div className="condition">
-          <span>天気: </span>
+          {props.results.conditionText && (
+            <p className="condition-text">
+              天気: 
+              </p>
+          )} 
           {props.results.icon && (
             <img src={props.results.icon} alt="Weather Icon" />
           )}
